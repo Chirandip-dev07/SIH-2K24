@@ -448,18 +448,105 @@ img {
   font-size: var(--small-font-size);
 }
 
-/*=============== BREAKPOINTS ===============*/
-/* For medium devices */
-@media screen and (min-width: 576px) {
+/*=============== RESPONSIVE DESIGN ADJUSTMENTS ===============*/
+
+/* For tablets and small desktops */
+@media screen and (max-width: 992px) {
+  .navbar {
+      width: 100%;
+      padding: 0 20px;
+  }
+
+  .content {
+      width: 90%;
+      margin: auto;
+      padding: 20px;
+  }
+
+  .content h1 {
+      font-size: 40px; /* Reduced font size */
+      text-align: center; /* Centered text */
+      margin-top: 5%; /* Reduced top margin */
+  }
+
+  .content .par {
+      padding-left: 0;
+      text-align: center; /* Centered text */
+  }
+
   .login {
-    justify-content: center;
+      position: static; /* Removes absolute positioning */
+      margin-top: 20px;
+      transform: none;
   }
+  
   .login__form {
-    width: 432px;
-    padding: 4rem 3rem 3.5rem;
-    border-radius: 1.5rem;
+      width: 100%;
+      padding: 2rem;
+      margin: 0 auto;
   }
-  .login__title {
-    font-size: 2rem;
+}
+
+/* For mobile devices */
+@media screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      height: auto;
+      align-items: center;
+      padding: 0;
+  }
+
+  .menu ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 20px 0;
+  }
+
+  .content h1 {
+      font-size: 30px; /* Further reduced font size */
+      margin-top: 10%;
+  }
+
+  .content .par {
+      font-size: 14px; /* Adjusted font size */
+      line-height: 1.5;
+  }
+
+  .login__form {
+      width: 90%;
+      padding: 1.5rem;
+  }
+  
+  .icons {
+      margin-top: 30px;
+      justify-content: center;
+  }
+}
+
+/* For small mobile devices */
+@media screen and (max-width: 576px) {
+  .navbar {
+      padding: 0 10px;
+  }
+
+  .content h1 {
+      font-size: 24px; /* Adjusted font size */
+  }
+
+  .content span {
+      font-size: 40px; /* Adjusted font size */
+  }
+
+  .content .par {
+      font-size: 12px; /* Adjusted font size */
+  }
+
+  .login__form {
+      padding: 1rem;
+  }
+  
+  .icons ion-icon {
+      font-size: 24px; /* Reduced icon size */
   }
 }
